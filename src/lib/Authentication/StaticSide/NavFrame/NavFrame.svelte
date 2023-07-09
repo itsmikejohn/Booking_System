@@ -23,7 +23,7 @@
 </script>
 
 <main class="bg-bluely fixed w-full top-0 left-0 right-0 z-10 flex items-center gap-4">
-    <div class="w-full">
+    <div class="">
         <button class="flex gap-1 flex-col p-2 transition-all active:scale-95"
         on:click={() => toggleMenu = true}
         >
@@ -34,7 +34,7 @@
     </div>
     
     {#if $staticStates.hasUser || $staticStates.hasAdmin}
-        <div class="">
+        <div class="w-full text-right">
             <p class="px-2 py-1 text-taupe font-semibold">{$auth.currentUser.displayName}</p>
         </div>
 
