@@ -18,6 +18,7 @@
     const campusArray = ["Cainta Main", "Antipolo", "Binangonan", "Cogeo", "San Mateo", "Sumulong", "Taytay"]
 
     const submitHandler = () => {
+        $staticStates.showLoading = true;
         const fullname = $userStates.fullname.Bindthis;
         const studentNumber = $userStates.studentNumber.Bindthis;
         const selectedDate = $userStates.selectedDate.Bindthis;
@@ -33,7 +34,11 @@
             course: course,
             campus: campus,
             purposeArray: purposeArray,
-        }, {merge:true})
+        }, {merge:true}).then(() => 
+        {
+            $staticStates.showLoading = false;
+            $userStates.successSubmit = true;
+        }) 
     }
 
 </script>

@@ -5,7 +5,8 @@
     
     //database calls
     import { auth, db } from "$lib/DB/firebase";
-	import { collection, doc, onSnapshot } from "firebase/firestore";
+	import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
+	import RaulButton from "$lib/GeneralComponents/RaulButton.svelte";
 
     onSnapshot(doc(collection($db, "submittedBooking"), $auth.currentUser.uid), documentResponse => 
     {
@@ -15,6 +16,9 @@
         
     })
 
+    const deleteHandler = bookingID => {
+        deleteDoc(doc(collection($db, "submittedBooking"), $auth.currentUser.uid))
+    }
     
 </script>
 
@@ -28,6 +32,10 @@
                     <p class="bg-blue-500 text-center text-white font-semibold">Status: processing</p>
                 </div>
                 
+                <div class="max-w-fit my-2">
+                    <RaulButton Title="Delete Booking" on:click={() => deleteHandler(formInfo.id)}/>
+                </div>
+
                 <div class="mt-2">
                     <p><b>Campus:</b> <i class=" font-semibold underline">{formInfo.campus}</i></p>
                     <p><b>Course:</b> <i class=" font-semibold underline">{formInfo.course}</i></p>

@@ -1,6 +1,7 @@
 import { writable } from "svelte/store";
 
 export const staticStates = writable({
+    
     activeItem: "",
     staticNav: ["Login", "About", "Contact Us"],
     userNav: ["Home", "Status"],
@@ -25,7 +26,7 @@ export const staticStates = writable({
 
 export const userStates = writable({
     activeItem: "",
-
+    successSubmit: false,
     purposeStore: [],
     fullname: "",
     studentNumber: "",
@@ -34,6 +35,7 @@ export const userStates = writable({
     campus: "",
 
     statusArray: [],
+
 })
 
 export const adminStates = writable({
