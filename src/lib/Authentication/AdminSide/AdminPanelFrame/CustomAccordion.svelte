@@ -51,7 +51,7 @@ on:click={showSelection}
 <main class="bg-yellow-500 w-full ">
     {#if transform.showSelection}
         <div class="border-t-2 border-black mt-1" in:slide>
-            <p class="text-left px-2"><b>Status:</b> {#if isAccepted} Accepted {:else} Processing {/if}</p>
+            <p class="text-left px-2"><b>Status:</b> {#if isAccepted} <b class="text-green-500 bg-black">Accepted</b> {:else} Processing {/if}</p>
             <p class="text-left px-2"><b>Fullname:</b> {fullname}</p>
             <p class="text-left px-2"><b>Course:</b> {course}</p>
             <p class="text-left px-2"><b>Campus:</b> {campus}</p>
