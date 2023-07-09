@@ -13,9 +13,9 @@
     onAuthStateChanged($auth, userCred => {
         if(userCred)
         {
-            if(userCred.uid === "adminKey") 
+            if(userCred.uid === "yreZLTZylPcPGBRLVNd6pWWZldE2") 
             {   // if there is admin it goes here
-                $staticStates.activeItem = "Panel";
+                $staticStates.activeItem = "Admin Panel";
                 $staticStates.hasAdmin = true;
                 $staticStates.defaultNav = $staticStates.adminNav;
 

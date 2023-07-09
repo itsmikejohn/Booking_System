@@ -29,7 +29,9 @@
                     <p class="text-center">There is no booking records base in your input in our database.</p>
                 {:else}
                 <div class="border-b-2 border-t-2 border-blue-500 py-1">
-                    <p class="bg-blue-500 text-center text-white font-semibold">Status: processing</p>
+                    <p class="bg-blue-500 text-center text-white font-semibold">
+                        Status: {#if formInfo.isAccepter} Accepted {:else} Processing {/if}
+                    </p>
                 </div>
                 
                 <div class="max-w-fit my-2">

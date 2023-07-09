@@ -28,6 +28,7 @@
 
         setDoc(doc(collection($db, "submittedBooking"), $auth.currentUser.uid), {
             createdAt: serverTimestamp(),
+            isAccepted: false,
             fullname: fullname,
             studentNumber: studentNumber,
             selectedDate: selectedDate,

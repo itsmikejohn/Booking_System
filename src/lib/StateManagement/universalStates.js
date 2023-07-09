@@ -5,7 +5,7 @@ export const staticStates = writable({
     activeItem: "",
     staticNav: ["Login", "About", "Contact Us"],
     userNav: ["Home", "Status"],
-    adminNav: ["Experimental"],
+    adminNav: ["Admin Panel"],
     defaultNav: ["SvelteKit", "Firebase", "Built from Scratch"],
 
     hasUser: false,

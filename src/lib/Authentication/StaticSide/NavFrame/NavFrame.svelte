@@ -41,7 +41,13 @@
     
     {#if $staticStates.hasUser || $staticStates.hasAdmin}
         <div class="w-full text-right">
-            <p class="px-2 py-1 text-taupe font-semibold">{$auth.currentUser.displayName}</p>
+            <p class="px-2 py-1 text-taupe font-semibold">
+                {#if $auth.currentUser.displayName === null}
+                    {$staticStates.name}
+                {:else}
+                    {$auth.currentUser.displayName}
+                {/if}
+            </p>
         </div>
 
         <div class="mr-3 sm:mr-10">
