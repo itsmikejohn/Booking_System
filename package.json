@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@splidejs/svelte-splide": "^0.2.9",
 		"firebase": "^10.0.0"
 	}
 }
