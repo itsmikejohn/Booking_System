@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 
-    import { staticStates } from "$lib/StateManagement/universalStates";
+    import { staticStates,userStates } from "$lib/StateManagement/universalStates";
     import RaulButton from "$lib/GeneralComponents/RaulButton.svelte";
     import { fly } from "svelte/transition";
     
@@ -18,7 +18,13 @@
         toggleMenu = false;
     }
 
-    
+    const signOutHandler = () => {
+        signOut($auth)
+        .then(() => 
+        {
+            $userStates.purposeStore = [];
+        })
+    }
 
 </script>
 
@@ -40,7 +46,7 @@
 
         <div class="mr-3 sm:mr-10">
             <button class="bg-red-500 px-2 py-1 text-white font-semibold rounded-sm transition-all hover:bg-red-600 active:scale-95"
-            on:click={signOut($auth)}
+            on:click={signOutHandler}
             >Signout</button>
         </div>
     {/if}
