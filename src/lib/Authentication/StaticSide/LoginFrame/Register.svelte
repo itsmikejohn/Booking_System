@@ -56,8 +56,8 @@
 </script>
 
 
-<main class="fixed bottom-0 top-0 left-0 right-0 p-2 sm:p-0" id="bgMe">
-    <div class="p-2 border-2 border-taupe mt-[20vh] flex flex-col gap-5 rounded-md bg-white mx-auto sm:max-w-[400px]" in:scale>
+<main class="">
+    <div class="p-2 border-2  mt-[20vh] flex flex-col gap-5 rounded-md b mx-auto sm:max-w-[400px] border-bluely bg-taupe" in:scale>
         <div class="">
             <p class="px-2 py-1 text-xl font-bold sm:text-3xl">Registration</p>
             <div class="border-t-4 border-bluely w-4 ml-2"></div>

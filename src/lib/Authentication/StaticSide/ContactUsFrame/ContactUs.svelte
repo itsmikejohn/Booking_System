@@ -71,7 +71,7 @@
 </script>
 
 <main class="">
-    <div class=" p-2  bg-taupe mt-[10vh] rounded-lg z-10 border-2" in:fly={{y:-300, duration: 800}}>
+    <div class=" p-2   mt-[10vh] rounded-lg z-10 border-2" in:fly={{y:-300, duration: 800}}>
 
         <div class="border-b-2 border-t-2 border-bluely py-1">
             <p class="bg-bluely px-2 text-white font-semibold text-center">Contact Us</p>
