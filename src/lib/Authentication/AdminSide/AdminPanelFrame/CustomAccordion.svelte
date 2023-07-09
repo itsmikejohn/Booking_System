@@ -4,7 +4,11 @@
 // @ts-nocheck
 
     import RaulButton from "$lib/GeneralComponents/RaulButton.svelte";
-import { slide } from "svelte/transition";
+    import { slide } from "svelte/transition";
+
+    //database calls
+    import { auth,db } from "$lib/DB/firebase";
+    import { collection, deleteDoc, doc } from "firebase/firestore";
 
     export let isAccepted = false;
     export let fullname = "fullname";
@@ -13,6 +17,7 @@ import { slide } from "svelte/transition";
     export let studentNumber = "studentNumber";
     export let selectedDate = "date";
     export let purposeArray = ["Sample1", "Sample2"];
+    export let bookID = "";
     
 
     export let Title = "Title";
@@ -62,13 +67,20 @@ on:click={showSelection}
                 <p class="text-left px-2 ">({purpose}).</p>
             {/each}
 
-            <div class="p-2">
+            <div class="p-2 flex gap-1">
                 <button class="{isAccepted ? "bg-green-600" : "bg-blue-600"} text-white px-2 py-1 w-full font-semibold rounded-md transition-all hover:font-bold active:scale-95"
                 on:click
                 >
                     {#if isAccepted} Accepted {:else} Accept {/if}
             
                 </button>
+
+                <RaulButton 
+                Title="Delete"
+                on:click={() => {
+                    deleteDoc(doc(collection($db, "submittedBooking"), bookID));
+                    transform.showSelection = false;
+                }}/>
             </div>
         </div>
     {/if}

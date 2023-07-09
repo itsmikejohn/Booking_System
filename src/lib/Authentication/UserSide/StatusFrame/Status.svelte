@@ -47,7 +47,7 @@
                     <div class="mt-5">
                         <p><b>Purpose for booking:</b></p>
                         {#each formInfo.purposeArray as purposeList}
-                            <p><b></b> <i class=" font-semibold underline">{purposeList}</i></p>
+                            <p><b></b> <i class="">{purposeList}.</i></p>
                         {/each}
                     </div>
                 </div>

@@ -44,6 +44,7 @@
                     studentNumber={bookedInfo.studentNumber}
                     selectedDate={bookedInfo.selectedDate}
                     purposeArray={bookedInfo.purposeArray}
+                    bookID={bookedInfo.id}
                     on:click={() => acceptHandler(bookedInfo.id)}
                     />
                 </div>
