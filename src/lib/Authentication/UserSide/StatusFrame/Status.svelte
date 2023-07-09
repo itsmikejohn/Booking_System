@@ -30,7 +30,7 @@
                 {:else}
                 <div class="border-b-2 border-t-2 border-blue-500 py-1">
                     <p class="bg-blue-500 text-center text-white font-semibold">
-                        Status: {#if formInfo.isAccepter} Accepted {:else} Processing {/if}
+                        Status: {#if formInfo.isAccepted} <x class="text-green-500 bg-black">Accepted</x> {:else} Processing {/if}
                     </p>
                 </div>
                 
