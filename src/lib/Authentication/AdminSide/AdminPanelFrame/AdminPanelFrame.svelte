@@ -4,7 +4,6 @@
 </script>
 
 <main>
-    {#if $staticStates.activeItem === "AdminPanel"}
-        <AdminPanel />
-    {/if}
+    <AdminPanel />
+    
 </main>

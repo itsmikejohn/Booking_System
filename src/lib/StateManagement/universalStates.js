@@ -39,5 +39,5 @@ export const userStates = writable({
 })
 
 export const adminStates = writable({
-
+    bookingArray: [],
 })
