@@ -17,6 +17,7 @@
 
     const campusArray = ["Cainta Main", "Antipolo", "Binangonan", "Cogeo", "San Mateo", "Sumulong", "Taytay"]
 
+    //this function to send bookers data to db
     const submitHandler = () => {
         $staticStates.showLoading = true;
         const fullname = $userStates.fullname.Bindthis;

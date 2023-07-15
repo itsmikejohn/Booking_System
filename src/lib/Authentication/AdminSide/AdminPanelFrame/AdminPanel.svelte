@@ -9,6 +9,7 @@
     import { auth, db } from "$lib/DB/firebase";
     import { onSnapshot, collection, updateDoc, doc } from "firebase/firestore";
 
+    //fetch submitted bookings
     onSnapshot(collection($db, "submittedBooking"), responseSnaps => {
         let fbData = [];
         responseSnaps.docs.forEach(doc => {

@@ -16,6 +16,7 @@
         
     })
 
+    //handle delete to delete data from db
     const deleteHandler = bookingID => {
         deleteDoc(doc(collection($db, "submittedBooking"), $auth.currentUser.uid))
     }
@@ -37,7 +38,7 @@
                 <div class="max-w-fit my-2">
                     <RaulButton Title="Delete Booking" on:click={() => deleteHandler(formInfo.id)}/>
                 </div>
-
+                
                 <div class="mt-2">
                     <p><b>Campus:</b> <i class=" font-semibold underline">{formInfo.campus}</i></p>
                     <p><b>Course:</b> <i class=" font-semibold underline">{formInfo.course}</i></p>
