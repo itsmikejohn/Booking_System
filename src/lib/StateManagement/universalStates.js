@@ -5,7 +5,7 @@ export const staticStates = writable({
     activeItem: "",
     staticNav: ["Login", "About", "Contact Us"],
     userNav: ["Home", "Status", "Chat Admin"],
-    adminNav: ["Admin Panel"],
+    adminNav: ["Admin Panel", "Chats"],
     defaultNav: ["SvelteKit", "Firebase", "Built from Scratch"],
 
     hasUser: false,
@@ -40,4 +40,7 @@ export const userStates = writable({
 
 export const adminStates = writable({
     bookingArray: [],
+
+    //Chats
+    allChatComparison: 0.1
 })
