@@ -44,3 +44,5 @@ export const adminStates = writable({
     //Chats
     allChatComparison: 0.1
 })
+
+//www.youtube.com/@mikeSharesCode
